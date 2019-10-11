@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Interception">
+  <link rel="stylesheet" href="./contents/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script>require('popper.js');</script>
+  <script>require('bootstrap');</script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <title>Qually Launcher</title>
+</head>
+
+<body>
+
+  <div class="coverAll">
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+
+  <div style="width:100%">
+    <div class="row" style="margin: 5px 10px 5px 0">
+        <div class="col-8">
+            <div class="row align-items-center">
+                <div id="userInfo" class="col text-center" style="border-radius: 5px">
+                    <p id="PCID">Ваш id:</p>
+                    <p id="subLvl">Ваш уровень подписки: </p>
+                    <p id="subExpDate">Подписка активна до: </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="bqGroup" style="display: none;">
+                  <div class="border border-dark rounded" style="height: 213px;">
+                    <div style="margin-top:5px">
+                      <div class="btn-group" style="width:100%; margin-left: 10px; margin-bottom: 5px">
+                        <button id="bqMainLaunch" type="button" class="btn btn-dark btn-sm disabled" style="width:80%">Bot
+                          Qually</button>
+                        <button type="button" style="margin-right:20px"
+                          class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a id="bqMainInstall" class="dropdown-item" href="#">Установить</a>
+                          <a id="bqMainLink" class="dropdown-item" href="#">Сделать ярлык на рабочем столе</a>
+                          <div class="dropdown-divider"></div>
+                          <a id="bqMainReInstall" class="dropdown-item" href="#">Переустановить</a>
+                          <a id="bqMainDelete" class="dropdown-item" href="#">Удалить</a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="versionText" id="bqLocalVersion">Установленная версия: не установлено</p>
+                    <p class="versionText" id="bqServerVersion"><b>Актуальная версия: 1.1</b></p>
+                    <div class="border-top border-dark">
+                      <p class="text-center versionLabel">Управление версиями</p>
+                      <div style="margin-left: 10px; margin-bottom: 5px;" class="input-group">
+                        <select id="bqSelect" class="form-control-sm" style="width: 90px;">
+                          <option>...</option>
+                        </select>
+                        <div class="input-group-append">
+                          <button id="bqSubLaunch" type="button" class="btn btn-dark btn-sm disabled">Запуск</button>
+                          <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a id="bqSubInstall" class="dropdown-item disabled" href="#">Установить старую версию</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a id="bqSubReInstall" class="dropdown-item disabled" href="#">Переустановить</a>
+                            <a id="bqSubDelete" class="dropdown-item disabled" href="#">Удалить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" id="qfGroup" style="display: none;">
+                  <div class="border border-dark rounded" style="height: 213px;">
+                    <div>
+                      <div class="btn-group" style="width:100%; margin-left: 10px; margin-bottom: 5px; margin-top: 5px">
+                        <button id="qfMainLaunch" type="button" class="btn btn-dark btn-sm disabled" style="width:80%">Qually
+                          Flash</button>
+                        <button type="button" style="margin-right:20px"
+                          class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a id="qfMainInstall" class="dropdown-item" href="#">Установить</a>
+                          <a id="qfMainLink" class="dropdown-item" href="#">Сделать ярлык на рабочем столе</a>
+                          <div class="dropdown-divider"></div>
+                          <a id="qfMainReInstall" class="dropdown-item" href="#">Переустановить</a>
+                          <a id="qfMainDelete" class="dropdown-item" href="#">Удалить</a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="versionText" id="qfLocalVersion">Установленная версия: не установлено</p>
+                    <p class="versionText" id="qfServerVersion">Текущая версия: 1.1</p>
+                    <div class="border-top border-dark">
+                      <p class="text-center versionLabel">Управление версиями</p>
+                      <div style="margin-left: 10px; margin-bottom: 5px;" class="input-group">
+                        <select id="qfSelect" class="form-control-sm" style="width: 90px;">
+                          <option>...</option>
+                        </select>
+                        <div class="input-group-append">
+                          <button id="qfSubLaunch" type="button" class="btn btn-dark btn-sm disabled">Запуск</button>
+                          <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a id="qfSubInstall" class="dropdown-item disabled" href="#">Установить старую версию</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a id="qfSubReInstall" class="dropdown-item disabled" href="#">Переустановить</a>
+                            <a id="qfSubDelete" class="dropdown-item disabled" href="#">Удалить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" id="acGroup" style="display: none;">
+                  <div class="border border-dark rounded" style="height: 213px;">
+                    <div>
+                      <div class="btn-group" style="width:100%; margin-left: 10px; margin-bottom: 5px; margin-top: 5px">
+                        <button id="acMainLaunch" type="button" class="btn btn-dark btn-sm disabled" style="width:80%">Acc
+                          Holder</button>
+                        <button type="button" style="margin-right:20px"
+                          class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a id="acMainInstall" class="dropdown-item" href="#">Установить</a>
+                          <a id="acMainLink" class="dropdown-item" href="#">Сделать ярлык на рабочем столе</a>
+                          <div class="dropdown-divider"></div>
+                          <a id="acMainReInstall" class="dropdown-item" href="#">Переустановить</a>
+                          <a id="acMainDelete" class="dropdown-item" href="#">Удалить</a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="versionText" id="acLocalVersion">Установленная версия: не установлено
+                    </p>
+                    <p class="versionText" id="acServerVersion">Текущая версия: 1.1</p>
+                    <div class="border-top border-dark">
+                      <p class="text-center" style="font-size:14px">Управление версиями</p>
+                      <div style="margin-left: 10px; margin-bottom: 5px;" class="input-group">
+                        <select id="acSelect" class="form-control-sm" style="width: 90px;">
+                          <option>...</option>
+                        </select>
+                        <div class="input-group-append">
+                          <button id="acSubLaunch" type="button" class="btn btn-dark btn-sm disabled">Запуск</button>
+                          <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a id="acSubInstall" class="dropdown-item disabled" href="#">Установить старую версию</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a id="acSubReInstall" class="dropdown-item disabled" href="#">Переустановить</a>
+                            <a id="acSubDelete" class="dropdown-item disabled" href="#">Удалить</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center" style="margin: 10px 120px">
+                <a href="scripts.html" id="scriptsBtn" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; width:93%; display: none; color: white">Скрипты</a>
+              <button id="buySubscribe" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%">Купить
+                подписку</button>
+              <button id="activateTrial" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%; display: none;">Активировать пробный период</button>
+              <button id="upgradeLvl" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%; display: none;">Повысить уровень</button>
+              <input style="margin-left:10px;margin-top:10px;width:93%" type="text" id="codeText"
+                placeholder="Введите ключ" />
+              <button id="activateKey" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%;">Активировать ключ</button>
+                <button id="activateUSB" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%; display: none;">Зарегистрировать USB</button>
+                <button id="deactivateUSB" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%; display: none">Отвязать USB</button>
+                <a id="messages" href="messages.html" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%;">Сообщения</a>
+                <a id="sendMessage" href="message.html" class="btn btn-dark btn-sm"
+                style="margin-left: 10px; margin-top: 10px; width:93%;">Отправить сообщение об ошибке</a>
+            </div>
+        </div>
+        <div class="col-4" style="background: white; border-radius: 5px">
+            <h5 class="text-center">Новости</h5>
+            <hr/>
+            <div style="overflow-x:hidden; overflow-y:auto; height:650px" id="news">
+        </div>
+    </div>
+</body>
+<script src="render.js"></script>
+
+</html>
